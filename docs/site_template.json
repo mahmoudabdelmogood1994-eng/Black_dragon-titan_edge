@@ -1,0 +1,11 @@
+{
+  "_comment": "Copy to site.json and fill EVERY null. Values already filled are verified public data (see docs/where_to_put_real_values.md). null = you must supply a real value; the program refuses to run with nulls.",
+  "plant_name": "Fujairah F2 IWPP, Qidfa (plant site, NOT the intake)",
+  "plant_lat": 25.30194,
+  "plant_lon": 56.37278,
+  "intake_latlon": null,
+  "current_uv_ms": null,
+  "data_latency_h": null,
+  "turbidity_limit_ntu": null,
+  "ndci_threshold": null
+}

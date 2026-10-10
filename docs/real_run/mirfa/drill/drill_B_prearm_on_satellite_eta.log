@@ -1,0 +1,23 @@
+DRILL (scenario exercise, not a detection). Satellite candidates: real, from the Mirfa series.
+Current, sensor layout and latency are ASSUMED.
+
+VARIANT B_prearm_on_satellite_eta
+
+  sim UTC     T+acq     delta  layer         event
+--------------------------------------------------------------------------------------------------------------
+ 07:12:59  00:00:00            SPACE         Satellite acquisition (sentinel2); Mirfa monitor candidates, scene 2026-09-27 (satellite layer supplied externally).
+ 10:12:59  03:00:00 +03:00:00  SPACE         Product available (ASSUMED latency 3.0 h)
+ 10:12:59  03:00:00      +0ms  SPACE         Mirfa monitor candidates, scene 2026-09-27 analysis done in 0 ms: 4 hotspot(s); top risk 28 % at (24.1245, 53.4282), 0.0336 km2
+ 10:12:59  03:00:00      +0ms  SPACE>GROUND  Threat message: hotspot #1, bloom edge 3.2 km from intake, closing 15 cm/s, ETA +02:58:23 after detection; predicted peak 5.1 NTU, viscosity x1.42
+ 10:12:59  03:00:00      +0ms  SPACE>GROUND  PRE-ARM: satellite ETA 3.0 h <= 6 h, trigger sent now instead of waiting for the in-situ alarm
+ 10:12:59  03:00:00      +2ms  GROUND>AIR    Low-power off-grid trigger sent: 24 B, airtime 206 ms, 3 repeats
+ 10:12:59  03:00:00    +206ms  AIR           Trigger received (copy 1), HMAC ok, target (24.1245, 53.4282), risk 28 %
+ 10:13:03  03:00:04 +00:00:04  AIR           Airborne (ASSUMED spin-up 4 s)
+ 10:14:18  03:01:19 +00:01:14  AIR           Arrived over bloom: 1.29 km flown, min clearance 17.3 m, collided=False
+ 10:21:41  03:08:42 +00:07:23  AIR           Hyper-spectral rescan done (442 s): Dinoflagellate (red-tide type), species confidence 0.45 (LOW), bloom confirmed=True
+ 10:21:41  03:08:42     +50ms  PLANT         RECOMMENDATION to operator: consider intake protection (advisory; needs subsea-sensor confirmation and operator approval, execution not modelled) - 02:49:42 before the modelled front arrival
+ 13:11:22  05:58:23 +02:49:42  GROUND        Modelled bloom front reaches the intake (reference)
+ 13:17:59  06:05:00 +00:06:37  GROUND        (baseline) simple turbidity > 3.0 NTU alarm would fire here; coherence lead = -204 min
+ 16:41:59  09:29:00 +03:24:00  GROUND        Phase-coherence ALARM (R >= 0.85, 20 min); 03:30:37 AFTER the modelled front arrival
+
+Operator recommendation 170 min BEFORE the modelled front; 0 min after satellite detection the trigger is sent.

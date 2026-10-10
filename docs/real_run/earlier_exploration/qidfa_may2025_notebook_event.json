@@ -1,0 +1,22 @@
+{
+  "timestamp_utc": "2026-10-08T08:45:35.729552+00:00",
+  "aoi": "Fujairah - Gulf of Oman (desalination intake zone)",
+  "bbox": [
+    56.25,
+    25.18,
+    56.5,
+    25.42
+  ],
+  "intake": [
+    25.30194,
+    56.37278
+  ],
+  "sources": [
+    "Sentinel-2 L2A"
+  ],
+  "ndci_max": 0.4440836012363434,
+  "ndci_p99": 0.07364103198051453,
+  "pct_water_px_above_threshold": 0.008699602718142537,
+  "threshold": 0.25,
+  "status": "ALERT"
+}

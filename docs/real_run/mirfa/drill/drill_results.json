@@ -1,0 +1,94 @@
+{
+  "scenario": "drill",
+  "intake": [
+    24.1393236,
+    53.4566472
+  ],
+  "scene_datetime": "2026-09-27T07:12:59.562000Z",
+  "current_uv_ms": [
+    0.130532034238459,
+    0.07390120457455186
+  ],
+  "candidates": [
+    {
+      "id": 1,
+      "lat": 24.12451,
+      "lon": 53.42817,
+      "area_km2": 0.0336,
+      "n_px": 84,
+      "radius_km": 0.10341765891652821,
+      "mean_index": 0.2,
+      "max_index": 0.625,
+      "dist_to_plant_km": 1.9520999491720445,
+      "risk_pct": 28.21590005082796,
+      "index_name": "NDCI (Mirfa monitor, S2 20 m)"
+    },
+    {
+      "id": 2,
+      "lat": 24.18273,
+      "lon": 53.53879,
+      "area_km2": 0.0076,
+      "n_px": 19,
+      "radius_km": 0.04918490759365935,
+      "mean_index": 0.2,
+      "max_index": 0.219,
+      "dist_to_plant_km": 11.556921216795434,
+      "risk_pct": 18.481078783204566,
+      "index_name": "NDCI (Mirfa monitor, S2 20 m)"
+    },
+    {
+      "id": 3,
+      "lat": 24.18709,
+      "lon": 53.53566,
+      "area_km2": 0.0072,
+      "n_px": 18,
+      "radius_km": 0.04787307364817192,
+      "mean_index": 0.2,
+      "max_index": 0.23,
+      "dist_to_plant_km": 11.599395902654948,
+      "risk_pct": 18.436604097345054,
+      "index_name": "NDCI (Mirfa monitor, S2 20 m)"
+    },
+    {
+      "id": 4,
+      "lat": 24.18521,
+      "lon": 53.53843,
+      "area_km2": 0.0108,
+      "n_px": 27,
+      "radius_km": 0.058632301428350395,
+      "mean_index": 0.2,
+      "max_index": 0.261,
+      "dist_to_plant_km": 11.691890838176704,
+      "risk_pct": 18.362109161823298,
+      "index_name": "NDCI (Mirfa monitor, S2 20 m)"
+    }
+  ],
+  "variants": {
+    "A_wait_for_insitu_alarm": {
+      "status": "OK",
+      "eta_h": 2.973081177765767,
+      "trigger_after_detection_min": 389.0,
+      "recommendation_after_detection_min": 400.07513039999975,
+      "margin_before_front_min": -221.69025973405374,
+      "in_time": false,
+      "alarm_to_airborne_s": 4.207823999997345,
+      "flight_s": 217.29999999999194,
+      "path_km": 3.8585443284288936,
+      "collided": false,
+      "drone_energy_wh": 20.149583333333066
+    },
+    "B_prearm_on_satellite_eta": {
+      "status": "OK",
+      "eta_h": 2.973081177765767,
+      "trigger_after_detection_min": 0.0,
+      "recommendation_after_detection_min": 8.691797066666672,
+      "margin_before_front_min": 169.69307359927933,
+      "in_time": true,
+      "alarm_to_airborne_s": 4.207824000000983,
+      "flight_s": 74.30000000000005,
+      "path_km": 1.287092362507492,
+      "collided": false,
+      "drone_energy_wh": 15.382916666666668
+    }
+  }
+}

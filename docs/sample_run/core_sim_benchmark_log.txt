@@ -1,0 +1,55 @@
+==============================================================================
+TITAN-EDGE DIGITAL TWIN  --  benchmark log   (simulation; no field data)
+==============================================================================
+
+--- A. Single narrated episode (seed 7, SNR@100m = 12 dB) ---
+[MOD1] event @ chainage   2178.6 m  (t=0)
+[MOD1] first trigger      +    17.5 ms  (propagation + STA/LTA)
+[MOD1] gather window closes + 817.5 ms using 9/31 sensors
+[MOD1] LOCALISED chainage  2179.00 m   error   0.42 m   t0_hat err -3.5 ms   dt=21.0 ms   conf 0.12   host compute 287.3 ms
+[MOD2] t=      19.5 ms            DEEP_SLEEP --ANOMALY_IRQ--> ANOMALY_DETECTED
+[MOD2] t=    1114.8 ms      ANOMALY_DETECTED --ANALYSIS_DONE--> HIGH_POWER_TRANSMIT
+[MOD2] t=    1832.3 ms   HIGH_POWER_TRANSMIT --TX_COMPLETE--> DEEP_SLEEP
+[MOD2] TriggerSignal 22 B, airtime 205.8 ms x3
+[MOD3] TriggerSignal RX +  1320.6 ms (packet #1), HMAC ok, target chainage 2179.0 m
+[MOD3] airborne          +    5.34 s
+[MOD3] flight 90.0 s, path 1494 m (straight 1492 m, eff 1.00), min clearance 7.9 m, reflex steps 5, collided=False
+[MOD3] ARRIVED           +   95.34 s ; AOI scan 59 s, coverage 97 %  (Edge-AI classifier: STUB)
+[MOD3] AREA SCANNED      +  154.09 s
+
+--- B. MOD 1 localisation vs SNR (60 random events per row) ---
+ SNR@100m  detect%  median err m  p90 err m  <=10m %  <=3m %
+      0 dB       0%           nan        nan       0%      0%
+      6 dB     100%         19.42     145.25      47%     35%
+     12 dB     100%          0.33       9.74      93%     82%
+     20 dB     100%          0.17       0.43     100%    100%
+
+--- C. False alarms: 0 declared events in 200 noise-only 8 s records (31 sensors) ---
+
+--- D. End-to-end Monte Carlo (60 episodes, SNR@100m = 12 dB, 8 moving + 3 fixed obstacles on collision courses) ---
+episodes OK 60/60 | UAV arrived 60/60 | collisions 1/60 | status other: []
+metric                                  median         p95
+loc_error_m                               0.30        9.87
+lat_event_to_first_trigger_ms            17.25       37.07
+lat_trigger_to_tx_complete_ms          1831.65     1936.20
+lat_trigger_to_uav_rx_ms               1329.12     1579.52
+lat_trigger_to_airborne_s                 5.35        5.60
+flight_s                                 57.95      105.08
+t_arrive_s                               63.34      110.68
+t_scanned_s                             122.09      169.43
+min_clearance_m                          16.66       17.97
+path_efficiency                           1.00        1.00
+compute_ms                              304.18      408.72
+e_sensing_mJ                            190.08      190.08
+e_edge_deep_sleep_mJ                      0.00        0.00
+e_edge_anomaly_mJ                        91.75      100.38
+e_edge_tx_mJ                            284.12      284.12
+e_flight_wh                               1.93        3.50
+e_scan_wh                                 1.71        1.71
+
+--- E. Edge-node energy model (ASSUMED datasheet-class constants) ---
+TriggerSignal: 22 B, LoRa SF9/125 kHz airtime 205.8 ms
+Average draw 80.7 uW  (sleep 74 %, heartbeat 26 %, events 0.3 %)
+Battery 68.4 Wh x 70% usable -> energy-limited 34 y, capped by cell shelf life to 15 y  (24 events/yr, 1 heartbeat/1 h)
+
+CAVEATS: idealised 1-D homogeneous pipe; power constants are assumptions; compute time is host CPU; Edge-AI classifier is a stub; no hardware in loop.

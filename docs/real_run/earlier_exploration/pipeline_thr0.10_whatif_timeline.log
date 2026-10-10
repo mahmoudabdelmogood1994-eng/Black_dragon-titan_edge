@@ -1,0 +1,6 @@
+  sim UTC     T+acq     delta  layer         event
+--------------------------------------------------------------------------------------------------------------
+ 06:48:21  00:00:00            SPACE         Satellite acquisition (sentinel2); scene is REAL data (historical replay).
+ 09:48:21  03:00:00 +03:00:00  SPACE         Product available (ASSUMED latency 3.0 h)
+ 09:48:22  03:00:01 +00:00:01  SPACE         NDCI analysis done in 1114 ms: 1 hotspot(s); top risk 33 % at (25.0777, 56.3657), 0.5 km2
+ 09:48:22  03:00:01      +0ms  SPACE         No hotspot threatens the intake: nearest hotspot is 10 km from the intake (limit 60 km) or the current carries it away. Watch only

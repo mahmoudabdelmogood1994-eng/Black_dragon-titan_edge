@@ -1,0 +1,223 @@
+{
+  "assumptions": {
+    "pipe_length_m": 3000.0,
+    "n_sensors": 31,
+    "c_nominal": 1200.0,
+    "c_error_sigma": 0.01,
+    "dispersion": 0.02,
+    "atten_per_m": 0.0008,
+    "pos_jitter_m": 0.5,
+    "sync_sigma_s": 0.0001,
+    "fs_hz": 2000.0,
+    "record_s": 8.0,
+    "event_time_s": 2.5,
+    "pulse_fc_hz": 60.0,
+    "pulse_tau_s": 0.012,
+    "band_hz": [
+      20.0,
+      150.0
+    ],
+    "hum_amp": 1.5,
+    "mains_hz": 50.0,
+    "sta_s": 0.03,
+    "lta_s": 1.0,
+    "sta_lta_thr": 6.0,
+    "gather_window_s": 0.6,
+    "pulse_margin_s": 0.2,
+    "min_sensors": 3,
+    "max_sensors": 9,
+    "v_supply": 3.3,
+    "i_deep_sleep_a": 1.8e-05,
+    "i_active_a": 0.025,
+    "i_tx_a": 0.12,
+    "i_sense_a": 0.008,
+    "wake_latency_s": 0.002,
+    "link_latency_s": 0.01,
+    "lora_sf": 9,
+    "lora_bw_hz": 125000.0,
+    "tx_repeats": 3,
+    "tx_spacing_s": 0.05,
+    "packet_loss": 0.05,
+    "battery_wh": 68.4,
+    "battery_usable": 0.7,
+    "self_discharge_per_yr": 0.01,
+    "cell_shelf_life_yr": 15.0,
+    "heartbeat_period_s": 3600.0,
+    "heartbeat_active_s": 0.2,
+    "heartbeat_tx_s": 0.15,
+    "events_per_year": 24.0,
+    "uav_vmax": 18.0,
+    "uav_amax": 6.0,
+    "uav_radius_m": 1.5,
+    "uav_spinup_s": 4.0,
+    "uav_verify_s": 0.02,
+    "p_cruise_w": 120.0,
+    "p_scan_w": 100.0,
+    "p_edge_ai_w": 5.0,
+    "scan_speed": 8.0,
+    "scan_swath_m": 30.0,
+    "scan_aoi_m": 100.0,
+    "dt_uav": 0.1,
+    "avoid_horizon_s": 10.0,
+    "avoid_margin_m": 18.0,
+    "reflex_tau_s": 1.5,
+    "arrive_radius_m": 10.0
+  },
+  "narrated_episode": {
+    "seed": 7,
+    "true_chainage_m": 2178.577283608305,
+    "snr_db": 12.0,
+    "status": "OK",
+    "loc_error_m": 0.4227163916948484,
+    "t0_error_ms": -3.4999999999998366,
+    "confidence": 0.11942836547112458,
+    "n_sensors_used": 9,
+    "compute_ms": 287.2933230000001,
+    "lat_event_to_first_trigger_ms": 17.50000000000007,
+    "lat_trigger_to_tx_complete_ms": 1814.7653230000005,
+    "lat_trigger_to_uav_rx_ms": 1303.1173230000004,
+    "lat_trigger_to_airborne_s": 5.323117323,
+    "t_arrive_s": 95.34061732299917,
+    "t_scanned_s": 154.09061732299915,
+    "e_sensing_mJ": 190.08000000000004,
+    "e_edge_deep_sleep_mJ": 0.0001188000000000001,
+    "e_edge_anomaly_mJ": 90.36169914750003,
+    "e_edge_tx_mJ": 284.1189120000001,
+    "arrived": true,
+    "collided": false,
+    "flight_s": 89.99999999999916,
+    "path_m": 1494.462695995077,
+    "straight_m": 1492.190611526928,
+    "path_efficiency": 0.9984796646485471,
+    "min_clearance_m": 7.8904013244859,
+    "reflex_events": 5.0,
+    "scan_s": 58.75,
+    "scan_coverage": 0.9688581314878892,
+    "e_flight_wh": 2.999999999999972,
+    "e_scan_wh": 1.7135416666666667
+  },
+  "localisation_vs_snr": [
+    {
+      "snr_db": 0,
+      "detect_pct": 0.0,
+      "median_err_m": NaN,
+      "p90_err_m": NaN,
+      "within_10m_pct": 0.0,
+      "within_3m_pct": 0.0
+    },
+    {
+      "snr_db": 6,
+      "detect_pct": 100.0,
+      "median_err_m": 19.423103049825613,
+      "p90_err_m": 145.24700212410414,
+      "within_10m_pct": 46.666666666666664,
+      "within_3m_pct": 35.0
+    },
+    {
+      "snr_db": 12,
+      "detect_pct": 100.0,
+      "median_err_m": 0.3336646281901494,
+      "p90_err_m": 9.744157920812416,
+      "within_10m_pct": 93.33333333333333,
+      "within_3m_pct": 81.66666666666667
+    },
+    {
+      "snr_db": 20,
+      "detect_pct": 100.0,
+      "median_err_m": 0.172411081943892,
+      "p90_err_m": 0.4318376404205538,
+      "within_10m_pct": 100.0,
+      "within_3m_pct": 100.0
+    }
+  ],
+  "false_alarms": {
+    "events": 0,
+    "records": 200,
+    "record_s": 8.0
+  },
+  "monte_carlo": {
+    "n": 60,
+    "ok": 60,
+    "arrived": 60,
+    "collisions": 1,
+    "summary": {
+      "loc_error_m": {
+        "median": 0.29532940443039024,
+        "p95": 9.874469058283292
+      },
+      "lat_event_to_first_trigger_ms": {
+        "median": 17.249999999999986,
+        "p95": 37.07499999999992
+      },
+      "lat_trigger_to_tx_complete_ms": {
+        "median": 1831.64786400003,
+        "p95": 1936.1969707499898
+      },
+      "lat_trigger_to_uav_rx_ms": {
+        "median": 1329.11639050001,
+        "p95": 1579.5208376500354
+      },
+      "lat_trigger_to_airborne_s": {
+        "median": 5.34911639050001,
+        "p95": 5.599520837650036
+      },
+      "flight_s": {
+        "median": 57.95000000000056,
+        "p95": 105.08499999999827
+      },
+      "t_arrive_s": {
+        "median": 63.33989864600058,
+        "p95": 110.67576845284827
+      },
+      "t_scanned_s": {
+        "median": 122.08989864600058,
+        "p95": 169.42576845284827
+      },
+      "min_clearance_m": {
+        "median": 16.66452120156094,
+        "p95": 17.97192005368238
+      },
+      "path_efficiency": {
+        "median": 0.9980796003145496,
+        "p95": 1.0032509730386663
+      },
+      "compute_ms": {
+        "median": 304.1758640000296,
+        "p95": 408.7249707499893
+      },
+      "e_sensing_mJ": {
+        "median": 190.08000000000004,
+        "p95": 190.08000000000004
+      },
+      "e_edge_deep_sleep_mJ": {
+        "median": 0.0001188000000000001,
+        "p95": 0.0001188000000000001
+      },
+      "e_edge_anomaly_mJ": {
+        "median": 91.75450878000245,
+        "p95": 100.37981008687414
+      },
+      "e_edge_tx_mJ": {
+        "median": 284.1189120000001,
+        "p95": 284.1189120000001
+      },
+      "e_flight_wh": {
+        "median": 1.9316666666666853,
+        "p95": 3.502833333333276
+      },
+      "e_scan_wh": {
+        "median": 1.7135416666666667,
+        "p95": 1.7135416666666667
+      }
+    }
+  },
+  "power_budget": {
+    "avg_power_uW": 80.72278836529682,
+    "sleep_share_pct": 73.58516870254249,
+    "heartbeat_share_pct": 26.118192595038227,
+    "event_share_pct": 0.2966387024192705,
+    "battery_life_years": 15.0,
+    "energy_limited_years": 34.4180227825879,
+    "airtime_ms": 205.82399999999998
+  }
+}

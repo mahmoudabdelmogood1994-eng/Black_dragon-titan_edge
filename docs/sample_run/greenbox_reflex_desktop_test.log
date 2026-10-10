@@ -1,0 +1,23 @@
+[ipc_rpmsg_stub] init (STUB -- not real RPMsg-Lite)
+reflex_kernel_t resident state: 24 bytes
+step=  0 fault=0  T=45.0C torque=10.0Nm vib=0.30g  fired=0 spike_rate=0.00
+step= 40 fault=0  T=45.0C torque=10.0Nm vib=0.30g  fired=0 spike_rate=0.00
+step= 80 fault=0  T=45.0C torque=10.0Nm vib=0.30g  fired=0 spike_rate=0.00
+step=120 fault=0  T=45.0C torque=10.0Nm vib=0.30g  fired=0 spike_rate=0.00
+step=160 fault=0  T=45.0C torque=10.0Nm vib=0.30g  fired=0 spike_rate=0.00
+step=200 fault=1  T=45.0C torque=10.0Nm vib=0.30g  fired=0 spike_rate=0.00
+step=240 fault=1  T=53.0C torque=11.6Nm vib=0.60g  fired=0 spike_rate=0.00
+step=253 fault=1  T=55.6C torque=12.1Nm vib=0.70g  fired=1 spike_rate=0.10
+step=280 fault=1  T=61.0C torque=13.2Nm vib=0.90g  fired=0 spike_rate=0.50
+step=320 fault=1  T=69.0C torque=14.8Nm vib=1.20g  fired=1 spike_rate=1.00
+step=360 fault=1  T=77.0C torque=16.4Nm vib=1.50g  fired=1 spike_rate=1.00
+
+--- summary ---
+false fires during normal operation (steps 0-199): 0
+fires during fault ramp (steps 200-399):           125
+first fault fire at step:                          253
+
+NOTE: thresholds/decay are the reference implementation's
+illustrative constants, not calibrated to real Green Box M
+sensor data. This test checks the kernel's *logic* is sound,
+not that these specific numbers are production-ready.

@@ -1,0 +1,169 @@
+{
+  "processed_utc": "2026-10-09T11:34:21.164186+00:00",
+  "scene_datetime": "2026-10-02T07:12:58.290000Z",
+  "data_age_days": 7,
+  "aoi": "Mirfa IWPP desalination plant, Abu Dhabi",
+  "bbox": [
+    53.36,
+    24.04,
+    53.54,
+    24.2
+  ],
+  "intake": [
+    24.1393236,
+    53.4566472
+  ],
+  "intake_in_aoi": true,
+  "aoi_check": "ok",
+  "sources": [
+    "Sentinel-2 L2A (S2B_39QYG_20261002_0_L2A)"
+  ],
+  "indicator": "NDCI (spectral proxy, not ground truth)",
+  "parameters": {
+    "ndci_threshold": 0.2,
+    "min_cluster_area_m2": 7200.0,
+    "ndwi_water": 0.1,
+    "nir_max_water": 0.2,
+    "min_water_body_px": 500,
+    "shore_buffer_px": 3,
+    "watch_min_pixels": 1,
+    "min_signal_sum": 0.03,
+    "smooth_px": 3,
+    "ndci_sanity_max": 0.9,
+    "pixel_size_m": 20.0,
+    "min_cluster_pixels_at_this_res": 18
+  },
+  "valid_pixels": 834796,
+  "valid_fraction_of_aoi": 0.9919,
+  "clean_water_pixels": 445388,
+  "clean_water_fraction_of_valid": 0.5335,
+  "ndci_clean_water": {
+    "max": 0.3114,
+    "p99": 0.061,
+    "p50": 0.0006,
+    "pixels_with_usable_signal": 445388
+  },
+  "band_stats_clean_water": {
+    "B03_green": [
+      0.0564,
+      0.0713,
+      0.1876
+    ],
+    "B04_red": [
+      0.0383,
+      0.0499,
+      0.1161
+    ],
+    "B05_rededge": [
+      0.0379,
+      0.0498,
+      0.1092
+    ],
+    "B08_nir": [
+      0.0324,
+      0.0401,
+      0.0484
+    ]
+  },
+  "data_quality": "ok",
+  "preprocessing": {
+    "reflectance_offset_subtracted": false,
+    "nir_dn_p2": 318.0,
+    "already_reflectance": false,
+    "processing_baseline": "05.13",
+    "cloud_cover_scene": 0.370058
+  },
+  "pixels_above_threshold": 18,
+  "clusters_total": 1,
+  "clusters_qualifying": 1,
+  "largest_cluster_px": 18,
+  "affected_area_m2": 7200.0,
+  "pct_clean_water_above_threshold": 0.00404,
+  "sensitivity": {
+    "0.1": {
+      "pixels": 901,
+      "clusters": 32,
+      "qualifying": 13,
+      "largest_px": 311
+    },
+    "0.15": {
+      "pixels": 92,
+      "clusters": 8,
+      "qualifying": 2,
+      "largest_px": 46
+    },
+    "0.2": {
+      "pixels": 18,
+      "clusters": 1,
+      "qualifying": 1,
+      "largest_px": 18
+    },
+    "0.25": {
+      "pixels": 6,
+      "clusters": 1,
+      "qualifying": 0,
+      "largest_px": 6
+    }
+  },
+  "mask_sensitivity": [
+    {
+      "nir_max": 0.12,
+      "shore_buffer_px": 3,
+      "clean_px": 444376,
+      "ndci_max": 0.311,
+      "px_above_thr": 18,
+      "qualifying_clusters": 1
+    },
+    {
+      "nir_max": 0.2,
+      "shore_buffer_px": 1,
+      "clean_px": 453384,
+      "ndci_max": 0.348,
+      "px_above_thr": 37,
+      "qualifying_clusters": 1
+    },
+    {
+      "nir_max": 0.2,
+      "shore_buffer_px": 3,
+      "clean_px": 445388,
+      "ndci_max": 0.311,
+      "px_above_thr": 18,
+      "qualifying_clusters": 1
+    },
+    {
+      "nir_max": 0.3,
+      "shore_buffer_px": 3,
+      "clean_px": 445427,
+      "ndci_max": 0.311,
+      "px_above_thr": 18,
+      "qualifying_clusters": 1
+    },
+    {
+      "nir_max": 9.0,
+      "shore_buffer_px": 3,
+      "clean_px": 445427,
+      "ndci_max": 0.311,
+      "px_above_thr": 18,
+      "qualifying_clusters": 1
+    }
+  ],
+  "qualifying_clusters": [
+    {
+      "lat": 24.12445,
+      "lon": 53.42839,
+      "pixels": 18,
+      "distance_to_intake_km": 3.31,
+      "area_m2": 7200.0,
+      "ndci_max": 0.311
+    }
+  ],
+  "status": "ALERT_CANDIDATE",
+  "next_action": "HIGH PRIORITY: cluster within 5 km of intake (nearest 3.31 km) - confirm on next scene (>=2 dates) before raising ALERT",
+  "clusters_near_intake": 1,
+  "near_intake_km": 5.0,
+  "v1_comparison": {
+    "v1_status": "ALERT",
+    "v1_ndci_max": 0.438,
+    "note": "v1 max (0.438) came from shoreline/mixed pixels (within ~1-2 px of land); no cluster met the area rule under any mask setting tested"
+  }
+}

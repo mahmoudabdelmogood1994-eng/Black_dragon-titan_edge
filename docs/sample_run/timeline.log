@@ -1,0 +1,33 @@
+TITAN-EDGE SPACE TWIN  --  timeline (simulated clock; SYNTHETIC scene)
+  sim UTC     T+acq     delta  layer         event
+--------------------------------------------------------------------------------------------------------------
+ 08:15:00  00:00:00            SPACE         Satellite acquisition (sentinel2); scene is SYNTHETIC.
+ 11:15:00  03:00:00 +03:00:00  SPACE         Product available (ASSUMED latency 3.0 h)
+ 11:15:00  03:00:00     +36ms  SPACE         NDCI analysis done in 36 ms: 2 hotspot(s); top risk 55 % at (27.2774, 33.8609), 4.8 km2
+ 11:15:00  03:00:00      +0ms  SPACE>GROUND  Threat message: hotspot #1, bloom edge 10.2 km from intake, closing 25 cm/s, ETA +08:23:51 after detection; predicted peak 8.2 NTU, viscosity x2.22
+ 18:39:00  10:24:00 +07:24:00  GROUND        Phase-coherence ALARM (R >= 0.85, 20 min); 00:59:51 before the modelled front arrival
+ 18:39:00  10:24:00      +2ms  GROUND>AIR    Low-power off-grid trigger sent: 24 B, airtime 206 ms, 3 repeats
+ 18:39:00  10:24:00    +206ms  AIR           Trigger received (copy 1), HMAC ok, target (27.2774, 33.8609), risk 55 %
+ 18:39:04  10:24:04 +00:00:04  AIR           Airborne (ASSUMED spin-up 4 s)
+ 18:42:27  10:27:28 +00:03:24  AIR           Arrived over bloom: 3.61 km flown, min clearance 18.0 m, collided=False
+ 18:49:50  10:34:51 +00:07:23  AIR           Hyper-spectral rescan done (442 s): Dinoflagellate (red-tide type), species confidence 0.42 (LOW), bloom confirmed=True
+ 18:49:50  10:34:51     +50ms  PLANT         AUTOMATED INTAKE SHUTDOWN SIGNAL raised (00:49:01 before the modelled front arrival)
+ 19:31:00  11:16:00 +00:41:09  GROUND        (baseline) simple turbidity > 3.0 NTU alarm would fire here; coherence lead = +52 min
+ 19:38:51  11:23:51 +00:07:51  GROUND        Modelled bloom front reaches the intake (reference)
+
+SATELLITE -> SHUTDOWN SIGNAL: 10:34:51 after acquisition (of which 3.0 h is the ASSUMED data latency)
+COHERENCE ALARM -> DRONE AIRBORNE: 4.2 s ; -> SHUTDOWN SIGNAL: 10.8 min ; margin before modelled front: 49 min
+
+--- Sensitivity: coherence alarm vs assumed precursor amplitude (10 seeds each) ---
+ precursor NTU  alarm rate   median lead vs threshold
+          0.00       100%                    -44 min
+          0.05       100%                    -50 min
+          0.10       100%                    -20 min
+          0.15       100%                     10 min
+          0.20       100%                     49 min
+          0.40       100%                     70 min
+
+--- False alarms: 0 in 100 noise-only 24 h records (6 sensors) ---
+
+--- Drone Monte Carlo: 30 flights, 6 moving obstacles on collision courses ---
+arrived 30/30, collisions 0/30, median min clearance 18.0 m

@@ -1,0 +1,25 @@
+{
+  "timestamp_utc": "2026-10-08T08:28:13.323414+00:00",
+  "scene_id": "20250511_074311_00_4001",
+  "scene_datetime": "2025-05-11T07:43:11Z",
+  "bbox": [
+    53.63200686177432,
+    23.990203106931855,
+    53.89428889725334,
+    24.192030163555803
+  ],
+  "anomaly_status": "NONE",
+  "indicator": "NDCI (spectral proxy, not ground truth)",
+  "ndci_threshold": 0.2,
+  "ndci_max": 0.14386840164661407,
+  "mean_turbidity_proxy": -0.40705743432044983,
+  "min_cluster_pixels": 8,
+  "clusters_total": 0,
+  "clusters_qualifying": 0,
+  "affected_pixels": 0,
+  "largest_cluster_pixels": 0,
+  "pixel_size_m": 30.0,
+  "affected_area_m2": 0.0,
+  "isolated_pixels_ignored": 0,
+  "next_action": "standby"
+}

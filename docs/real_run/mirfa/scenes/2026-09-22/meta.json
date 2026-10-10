@@ -1,0 +1,22 @@
+{
+  "source": "Sentinel-2 L2A (S2B_39QYG_20260922_0_L2A)",
+  "bbox": [
+    53.36,
+    24.04,
+    53.54,
+    24.2
+  ],
+  "datetime": "2026-09-22T07:12:57.703000Z",
+  "cloud_cover_scene": 0.163569,
+  "processing_baseline": "05.13",
+  "reflectance_offset_subtracted": false,
+  "nir_dn_p2": 216.0,
+  "already_reflectance": false,
+  "aoi": "Mirfa IWPP desalination plant, Abu Dhabi",
+  "intake": [
+    24.1393236,
+    53.4566472
+  ],
+  "aoi_check": "ok",
+  "intake_in_aoi": true
+}

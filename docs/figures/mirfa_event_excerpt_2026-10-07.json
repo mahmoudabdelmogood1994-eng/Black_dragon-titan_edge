@@ -1,0 +1,35 @@
+{
+  "status": "WATCH",
+  "next_action": "isolated pixels only - re-check next acquisition",
+  "aoi": "Mirfa IWPP desalination plant, Abu Dhabi",
+  "intake": [
+    24.1393236,
+    53.4566472
+  ],
+  "scene_datetime": "2026-10-07T07:13:00.119000Z",
+  "data_quality": "ok",
+  "ndci_clean_water": {
+    "max": 0.4269,
+    "p99": 0.0676,
+    "p50": 0.0213,
+    "pixels_with_usable_signal": 441522
+  },
+  "pixels_above_threshold": 21,
+  "clusters_total": 7,
+  "clusters_qualifying": 0,
+  "clusters_near_intake": 0,
+  "parameters": {
+    "ndci_threshold": 0.2,
+    "min_cluster_area_m2": 7200.0,
+    "ndwi_water": 0.1,
+    "nir_max_water": 0.2,
+    "min_water_body_px": 500,
+    "shore_buffer_px": 3,
+    "watch_min_pixels": 1,
+    "min_signal_sum": 0.03,
+    "smooth_px": 3,
+    "ndci_sanity_max": 0.9,
+    "pixel_size_m": 20.0,
+    "min_cluster_pixels_at_this_res": 18
+  }
+}

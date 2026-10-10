@@ -1,0 +1,57 @@
+{
+  "plant_name": "Demo desalination plant (illustrative site)",
+  "plant_lat": 27.25,
+  "plant_lon": 33.738,
+  "intake_xy_m": [
+    [
+      1100,
+      -60
+    ],
+    [
+      1120,
+      -20
+    ],
+    [
+      1140,
+      20
+    ],
+    [
+      1160,
+      60
+    ],
+    [
+      1180,
+      -40
+    ],
+    [
+      1200,
+      40
+    ]
+  ],
+  "intake_latlon": null,
+  "current_uv_ms": [
+    -0.23,
+    -0.1
+  ],
+  "sensor": "sentinel2",
+  "acquisition_utc": "2026-10-07T08:15:00Z",
+  "data_latency_h": 3.0,
+  "ndci_threshold": 0.1,
+  "min_area_km2": 0.25,
+  "min_cluster_px": 8,
+  "ndwi_threshold": 0.0,
+  "coast_buffer_px": 0,
+  "max_range_km": 60.0,
+  "turbidity_baseline_ntu": 0.6,
+  "turbidity_limit_ntu": 3.0,
+  "precursor_amp_ntu": 0.2,
+  "plv_threshold": 0.85,
+  "plv_persist_min": 20,
+  "scan_aoi_m": 400.0,
+  "scan_swath_m": 60.0,
+  "scan_speed_ms": 8.0,
+  "sam_min_confidence": 0.6,
+  "prearm": false,
+  "prearm_eta_h": 6.0,
+  "recommend_protection": true
+}

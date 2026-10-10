@@ -1,0 +1,10 @@
+numpy
+scipy
+rasterio
+matplotlib
+folium
+streamlit
+pandas
+h5py
+# only for data_sources.py (downloads):
+# pystac-client planetary-computer stackstac rioxarray requests

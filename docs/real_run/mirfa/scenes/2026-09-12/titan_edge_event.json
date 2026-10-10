@@ -1,0 +1,185 @@
+{
+  "processed_utc": "2026-10-09T11:33:53.415900+00:00",
+  "scene_datetime": "2026-09-12T07:12:55.950000Z",
+  "data_age_days": 27,
+  "aoi": "Mirfa IWPP desalination plant, Abu Dhabi",
+  "bbox": [
+    53.36,
+    24.04,
+    53.54,
+    24.2
+  ],
+  "intake": [
+    24.1393236,
+    53.4566472
+  ],
+  "intake_in_aoi": true,
+  "aoi_check": "ok",
+  "sources": [
+    "Sentinel-2 L2A (S2B_39QYG_20260912_0_L2A)"
+  ],
+  "indicator": "NDCI (spectral proxy, not ground truth)",
+  "parameters": {
+    "ndci_threshold": 0.2,
+    "min_cluster_area_m2": 7200.0,
+    "ndwi_water": 0.1,
+    "nir_max_water": 0.2,
+    "min_water_body_px": 500,
+    "shore_buffer_px": 3,
+    "watch_min_pixels": 1,
+    "min_signal_sum": 0.03,
+    "smooth_px": 3,
+    "ndci_sanity_max": 0.9,
+    "pixel_size_m": 20.0,
+    "min_cluster_pixels_at_this_res": 18
+  },
+  "valid_pixels": 835979,
+  "valid_fraction_of_aoi": 0.9933,
+  "clean_water_pixels": 437588,
+  "clean_water_fraction_of_valid": 0.5234,
+  "ndci_clean_water": {
+    "max": 0.361,
+    "p99": 0.108,
+    "p50": -0.0042,
+    "pixels_with_usable_signal": 437588
+  },
+  "band_stats_clean_water": {
+    "B03_green": [
+      0.0662,
+      0.0771,
+      0.2027
+    ],
+    "B04_red": [
+      0.0465,
+      0.0546,
+      0.1342
+    ],
+    "B05_rededge": [
+      0.0453,
+      0.0542,
+      0.1391
+    ],
+    "B08_nir": [
+      0.0343,
+      0.0432,
+      0.0519
+    ]
+  },
+  "data_quality": "ok",
+  "preprocessing": {
+    "reflectance_offset_subtracted": false,
+    "nir_dn_p2": 324.0,
+    "already_reflectance": false,
+    "processing_baseline": "05.12",
+    "cloud_cover_scene": 0.308287
+  },
+  "pixels_above_threshold": 204,
+  "clusters_total": 13,
+  "clusters_qualifying": 3,
+  "largest_cluster_px": 92,
+  "affected_area_m2": 65600.0,
+  "pct_clean_water_above_threshold": 0.04662,
+  "sensitivity": {
+    "0.1": {
+      "pixels": 5233,
+      "clusters": 66,
+      "qualifying": 26,
+      "largest_px": 1862
+    },
+    "0.15": {
+      "pixels": 1406,
+      "clusters": 26,
+      "qualifying": 11,
+      "largest_px": 364
+    },
+    "0.2": {
+      "pixels": 204,
+      "clusters": 13,
+      "qualifying": 3,
+      "largest_px": 92
+    },
+    "0.25": {
+      "pixels": 34,
+      "clusters": 3,
+      "qualifying": 1,
+      "largest_px": 30
+    }
+  },
+  "mask_sensitivity": [
+    {
+      "nir_max": 0.12,
+      "shore_buffer_px": 3,
+      "clean_px": 436912,
+      "ndci_max": 0.361,
+      "px_above_thr": 204,
+      "qualifying_clusters": 3
+    },
+    {
+      "nir_max": 0.2,
+      "shore_buffer_px": 1,
+      "clean_px": 446267,
+      "ndci_max": 0.375,
+      "px_above_thr": 404,
+      "qualifying_clusters": 6
+    },
+    {
+      "nir_max": 0.2,
+      "shore_buffer_px": 3,
+      "clean_px": 437588,
+      "ndci_max": 0.361,
+      "px_above_thr": 204,
+      "qualifying_clusters": 3
+    },
+    {
+      "nir_max": 0.3,
+      "shore_buffer_px": 3,
+      "clean_px": 437635,
+      "ndci_max": 0.361,
+      "px_above_thr": 204,
+      "qualifying_clusters": 3
+    },
+    {
+      "nir_max": 9.0,
+      "shore_buffer_px": 3,
+      "clean_px": 437635,
+      "ndci_max": 0.361,
+      "px_above_thr": 204,
+      "qualifying_clusters": 3
+    }
+  ],
+  "qualifying_clusters": [
+    {
+      "lat": 24.18853,
+      "lon": 53.53378,
+      "pixels": 92,
+      "distance_to_intake_km": 9.55,
+      "area_m2": 36800.0,
+      "ndci_max": 0.233
+    },
+    {
+      "lat": 24.1821,
+      "lon": 53.53759,
+      "pixels": 24,
+      "distance_to_intake_km": 9.49,
+      "area_m2": 9600.0,
+      "ndci_max": 0.24
+    },
+    {
+      "lat": 24.12347,
+      "lon": 53.42811,
+      "pixels": 48,
+      "distance_to_intake_km": 3.39,
+      "area_m2": 19200.0,
+      "ndci_max": 0.361
+    }
+  ],
+  "status": "ALERT_CANDIDATE",
+  "next_action": "HIGH PRIORITY: cluster within 5 km of intake (nearest 3.39 km) - confirm on next scene (>=2 dates) before raising ALERT",
+  "clusters_near_intake": 1,
+  "near_intake_km": 5.0,
+  "v1_comparison": {
+    "v1_status": "ALERT",
+    "v1_ndci_max": 0.438,
+    "note": "v1 max (0.438) came from shoreline/mixed pixels (within ~1-2 px of land); no cluster met the area rule under any mask setting tested"
+  }
+}

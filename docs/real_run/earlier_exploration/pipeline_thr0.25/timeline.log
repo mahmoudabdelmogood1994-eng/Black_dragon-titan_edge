@@ -1,0 +1,9 @@
+TITAN-EDGE SPACE TWIN  --  timeline (simulated clock; real scene)
+  sim UTC     T+acq     delta  layer         event
+--------------------------------------------------------------------------------------------------------------
+ 06:48:21  00:00:00            SPACE         Satellite acquisition (sentinel2); scene is REAL data (historical replay).
+ 09:48:21  03:00:00 +03:00:00  SPACE         Product available (ASSUMED latency 3.0 h)
+ 09:48:21  03:00:00     +62ms  SPACE         NDCI analysis done in 62 ms: 0 hotspot(s)
+ 09:48:21  03:00:00      +0ms  SPACE         No hotspot threatens the intake: no hotspots above threshold. Watch only
+
+status: NO_THREAT

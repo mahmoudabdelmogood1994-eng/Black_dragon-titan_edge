@@ -1,0 +1,98 @@
+{
+  "status": "OK",
+  "synthetic_scene": true,
+  "index": "NDCI",
+  "seed": 7,
+  "hotspots": [
+    {
+      "id": 1,
+      "lat": 27.27742796173657,
+      "lon": 33.86085651214128,
+      "area_km2": 4.7577174784329745,
+      "n_px": 2718,
+      "radius_km": 1.23062118828445,
+      "mean_index": 0.19226379692554474,
+      "max_index": 0.5791481733322144,
+      "dist_to_plant_km": 12.531087240849653,
+      "risk_pct": 55.097069690146924,
+      "index_name": "NDCI"
+    },
+    {
+      "id": 2,
+      "lat": 27.313064150943397,
+      "lon": 33.79731037735849,
+      "area_km2": 0.7419517504355532,
+      "n_px": 424,
+      "radius_km": 0.4859738441881468,
+      "mean_index": 0.17650792002677917,
+      "max_index": 0.31217485666275024,
+      "dist_to_plant_km": 9.114788543949322,
+      "risk_pct": 36.07115821224532,
+      "index_name": "NDCI"
+    }
+  ],
+  "eta_h": 8.397591764621543,
+  "predicted_peak_ntu": 8.175459897518158,
+  "predicted_viscosity_ratio": 2.22426105112848,
+  "coherence_alarm_after_detection_h": 7.4,
+  "coherence_lead_vs_threshold_min": 52.0,
+  "trigger_bytes": 24,
+  "trigger_airtime_ms": 205.82399999999998,
+  "alarm_to_drone_rx_ms": 207.8239999973448,
+  "alarm_to_airborne_s": 4.207823999997345,
+  "flight_s": 203.59999999999272,
+  "path_km": 3.610852802411913,
+  "min_clearance_m": 17.959170869855114,
+  "collided": false,
+  "scan_s": 442.5,
+  "class_label": "Dinoflagellate (red-tide type)",
+  "class_confidence": 0.42103332316023523,
+  "bloom_confirmed": true,
+  "shutdown_signal": true,
+  "alarm_to_shutdown_signal_min": 10.846797066666477,
+  "margin_before_front_min": 49.008708810626075,
+  "drone_energy_wh": 19.692916666666424,
+  "benchmark": {
+    "sensitivity": [
+      {
+        "precursor_ntu": 0.0,
+        "alarm_rate": 1.0,
+        "median_lead_min": -44.5
+      },
+      {
+        "precursor_ntu": 0.05,
+        "alarm_rate": 1.0,
+        "median_lead_min": -50.0
+      },
+      {
+        "precursor_ntu": 0.1,
+        "alarm_rate": 1.0,
+        "median_lead_min": -19.5
+      },
+      {
+        "precursor_ntu": 0.15,
+        "alarm_rate": 1.0,
+        "median_lead_min": 10.0
+      },
+      {
+        "precursor_ntu": 0.2,
+        "alarm_rate": 1.0,
+        "median_lead_min": 49.0
+      },
+      {
+        "precursor_ntu": 0.4,
+        "alarm_rate": 1.0,
+        "median_lead_min": 70.5
+      }
+    ],
+    "false_alarms": {
+      "events": 0,
+      "runs": 100,
+      "hours": 24.0
+    },
+    "drone_mc": {
+      "flights": 30,
+      "collisions": 0
+    }
+  }
+}
