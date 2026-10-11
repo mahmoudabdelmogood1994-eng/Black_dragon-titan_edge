@@ -128,4 +128,4 @@ Contains modified Copernicus Sentinel-2 data (2026), accessed through the Earth 
 
 ## Contact
 
-[Team name · email · links]
+Team name: Black Dragon
